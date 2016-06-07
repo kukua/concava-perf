@@ -1,6 +1,6 @@
 var fs = require('fs')
-var mysql = require('mysql')
 var _ = require('underscore')
+var mysql = require('mysql')
 
 // Configuration
 require('dotenv').config()
@@ -75,8 +75,8 @@ function compare (payloads, records) {
 	log('Interval:           %d seconds', interval)
 	log('Timestamp start:    after %d bytes', timestampStartByte)
 	log('Zero check start:   after %d bytes (checks for uint16le)', zeroCheckStartByte)
-	log('Payloads:           %d', payloads.length)
-	log('Records:            %d', records.length)
+	log('Payloads (SPUL):    %d', payloads.length)
+	log('Records (MySQL):    %d', records.length)
 
 	var ts = endTimestamp - (endTimestamp % interval)
 	var missingPayloads = 0
