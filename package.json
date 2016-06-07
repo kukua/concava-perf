@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "env TZ=UTC node src/verify.js"
+  },
+  "dependencies": {
+    "dotenv": "^2.0.0",
+    "mysql": "^2.11.0",
+    "underscore": "^1.8.3"
+  }
+}
