@@ -1,1 +1,1 @@
-0 3 * * 0 ubuntu cd /path/to/repo/ && docker-compose up
+0 2 * * 6 ubuntu cd /path/to/repo/ && docker-compose up

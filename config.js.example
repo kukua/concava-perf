@@ -1,4 +1,4 @@
-const range = 24 * 60 * 60 // seconds
+const range = 7 * 24 * 60 * 60 // seconds
 const endTimestamp = Math.floor(Date.now() / 1000)
 
 module.exports = {
@@ -21,4 +21,14 @@ module.exports = {
 		endTimestamp: endTimestamp,
 		startTimestamp: endTimestamp - range,
 	},
+	report: {
+		// Follow these instructions:
+		// https://www.npmjs.com/package/google-spreadsheet#service-account-recommended-method
+		// Place JSON file next to this file and name it 'google-credentials.json'.
+		// Don't forget to share the spreadsheet with the client_email from the JSON file.
+		creds: require('./google-credentials.json'),
+
+		key: '', // Long ID from spreadsheet URL
+		titleFormat: 'yyyy-mm-dd \wW',
+	}
 }

@@ -34,5 +34,9 @@ p.done((err, results) => {
 	if (err) return console.error(err)
 
 	// Generate spreadsheet
-	report(results)
+	report(results, config.report, (err) => {
+		if (err) return console.error(err)
+
+		console.log('Done.')
+	})
 })

@@ -41,7 +41,6 @@ module.exports = (udid, config, payloads, records, cb) => {
 		result.periods += 1
 	}
 
-	result.dataLoss    = (result.missingData.length     / result.periods)
 	result.payloadLoss = (result.missingPayloads.length / result.periods)
 	result.recordLoss  = (result.missingRecords.length  / result.periods)
 
