@@ -1,22 +1,19 @@
-# Verify measurements
+# ConCaVa Performance
+
+> Automatically generated weekly reports on data loss.
 
 ## Usage
 
 ```bash
-cp .env.example .env
-chmod 600 .env
-# > Edit .env
+git clone https://github.com/kukua/concava-perf
+cd concava-perf
 
-npm start <device ID> <end timestamp> <range> <interval> <timestamp start> <zero check start>
+cp config.js.example config.js
+chmod 600 config.js
+# > Edit config.js
 
-// Arguments:
-//   device ID          Hexadecimal device ID (lowercase).
-//   end timestamp      [optional] UNIX timestamp till end point. Default: current
-//   range              [optional] Seconds to determine start timestamp. Default: 86400 (24 hours)
-//   interval           [optional] Measurement interval. Default: 300 (5 minutes)
-//   timestamp start    [optional] Start byte of timestamp. Default: 4
-//   zero check start   [optional] Start byte of zero check. Default: 14 (humidity)
+docker-compose run report npm install
+sudo chown -R $USER:$USER .
 
-// Example (last 90 days):
-npm start 5131fc0f120241ae '' 7776000
+docker-compose up
 ```

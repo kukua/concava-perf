@@ -1,8 +1,25 @@
 {
   "private": true,
+  "name": "concava-perf",
+  "version": "0.1.0",
+  "description": "Automatically generated weekly reports on data loss.",
+  "main": "src/collect.js",
   "scripts": {
-    "start": "env TZ=UTC node src/collect.js"
+    "start": "env TZ=UTC node src/collect.js",
+    "lint": "eslint src/",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "pre-commit": "lint",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kukua/concava-perf.git"
+  },
+  "author": "Kukua Team <dev@kukua.cc>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kukua/concava-perf/issues"
+  },
+  "homepage": "https://github.com/kukua/concava-perf#readme",
   "dependencies": {
     "dateformat": "^1.0.12",
     "google-spreadsheet": "^2.0.3",
@@ -10,5 +27,9 @@
     "node-parallel": "^0.1.6",
     "run-series": "^1.1.4",
     "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "eslint": "^3.0.1",
+    "pre-commit": "^1.1.3"
   }
 }
