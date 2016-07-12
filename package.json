@@ -1,11 +1,14 @@
 {
   "private": true,
   "scripts": {
-    "start": "env TZ=UTC node src/verify.js"
+    "start": "env TZ=UTC node src/collect.js"
   },
   "dependencies": {
-    "dotenv": "^2.0.0",
+    "bunyan": "^1.8.1",
+    "google-auth-library": "^0.9.8",
+    "googleapis": "^9.0.0",
     "mysql": "^2.11.0",
+    "node-parallel": "^0.1.6",
     "underscore": "^1.8.3"
   }
 }

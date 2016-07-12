@@ -1,0 +1,24 @@
+const range = 24 * 60 * 60 // seconds
+const endTimestamp = Math.floor(Date.now() / 1000)
+
+module.exports = {
+	spulLogFile: './spul.full.log',
+	mysql: {
+		host: '',
+		user: 'admin',
+		password: '',
+		database: 'measurements',
+	},
+	udids: {
+		'0000000000000001': { name: 'DEV_FRIENDLY_NAME' },
+	},
+	timeout: 60 * 1000,
+	period: {
+		interval: 5 * 60, // seconds
+		timestampStartByte: 4, // bytes
+		zeroCheckStartByte: 14, // bytes
+		range: range,
+		endTimestamp: endTimestamp,
+		startTimestamp: endTimestamp - range,
+	},
+}
