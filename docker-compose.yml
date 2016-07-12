@@ -3,5 +3,4 @@ report:
     working_dir: /data
     volumes:
         - ./:/data
-        - ./report.log:/tmp/output.log
     command: npm start

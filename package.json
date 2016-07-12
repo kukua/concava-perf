@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/kukua/concava-perf#readme",
   "dependencies": {
+    "bunyan": "^1.8.1",
     "dateformat": "^1.0.12",
     "google-spreadsheet": "^2.0.3",
     "mysql": "^2.11.0",

@@ -13,7 +13,7 @@ chmod 600 config.js
 # > Edit config.js
 
 docker-compose run report npm install
-sudo chown -R $USER:$USER .
+sudo chown -R $USER:$USER . # Gimme
 
 docker-compose up
 ```

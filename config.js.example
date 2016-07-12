@@ -2,6 +2,7 @@ const range = 7 * 24 * 60 * 60 // seconds
 const endTimestamp = Math.floor(Date.now() / 1000)
 
 module.exports = {
+	logFile: '/tmp/output.log',
 	spulLogFile: './spul.full.log',
 	mysql: {
 		host: '',
