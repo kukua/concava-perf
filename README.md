@@ -12,7 +12,7 @@ cp config.js.example config.js
 chmod 600 config.js
 # > Edit config.js
 
-docker-compose run report npm install
+docker-compose run report npm install --production
 sudo chown -R $USER:$USER . # Gimme
 
 docker-compose up
