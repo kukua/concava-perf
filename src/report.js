@@ -17,6 +17,7 @@ module.exports = (results, config, cb) => {
 		'Expected Count': (result) => result.periods,
 		'Payload Loss': (result) => percentage(result.payloadLoss),
 		'Record Loss': (result) => percentage(result.recordLoss),
+		'Fixes': (result) => result.fixes.length,
 	}
 
 	doc.useServiceAccountAuth(config.creds, () => {

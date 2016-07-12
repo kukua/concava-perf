@@ -40,6 +40,13 @@ p.done((err, results) => {
 
 	if (err) return log.error({ type: 'error' }, err)
 
+	// Log fixes
+	_.each(results, (result) => {
+		if ( ! result.fixes.length) return
+
+		log.info({ type: 'fixes', udid: result.udid, fixes: result.fixes })
+	})
+
 	// Generate spreadsheet
 	report(results, config.report, (err) => {
 		if (err) return log.error({ type: 'error' }, err)
